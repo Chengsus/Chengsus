@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>教师注册系统</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-repeat:no-repeat;
+      background-size:auto;
+      background-position:center -33px;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .register-container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 20px;
+
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: inline-block;
+      width: 100px;
+    }
+    .form-group input {
+      padding: 8px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group select {
+      padding: 8px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+
+
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="register-container">
+  <h2>教师注册</h2>
+  <form action="register" method="post">
+    <div class="form-group">
+      <label for="name">姓名:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">年龄:</label>
+      <input type="text" id="age" name="age" required>
+    </div>
+    <div class="form-group">
+      <label>性别:</label>
+      <div class="lian">
+        <input type="radio" id="man" name="sex" value="true" required>
+        <label for="man">男</label>
+        <input type="radio" id="woman" name="sex" value="false" required>
+        <label for="woman">女</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="title">职称:</label>
+      <select id="title" name="title" required>
+        <option value="教授">教授</option>
+        <option value="副教授">副教授</option>
+        <option value="讲师">讲师</option>
+        <option value="院长">院长</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="department">所在院系:</label>
+      <input type="text" id="department" name="department" required>
+    </div>
+    <div class="form-group">
+      <label>是否党员:</label>
+      <div class="lian">
+        <input type="radio" id="yes" name="isPartyMember" value="true" required>
+        <label for="yes">是</label>
+        <input type="radio" id="no" name="isPartyMember" value="false" required>
+        <label for="no">否</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>所授课程:</label>
+      <label><input type="checkbox" name="courses" value="数学" >高数</label>
+      <label><input type="checkbox" name="courses" value="物理" >电子信息</label>
+      <label><input type="checkbox" name="courses" value="计算机科学" >计算机</label>
+      <label><input type="checkbox" name="courses" value="英语" >体育</label>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="注册">
+    </div>
+  </form>
+</div>
+</body>
+
+</html>
